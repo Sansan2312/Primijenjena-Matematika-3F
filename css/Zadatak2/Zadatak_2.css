@@ -1,0 +1,107 @@
+.background {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+
+/*Tu se definiraju varijable*/
+:root {
+  --background-color-1: #52b69a;
+  --background-color-2: #34a0a4;
+  --background-color-3: #1a759f;
+  --background-color-4: #184e77;
+  --font-color-default: rgb(31, 30, 30);
+  --font-color-white: rgb(241, 241, 241);
+  --font-color-white-action: white;
+  --font-size: 28px;
+  --font-size-header: 42px;
+  --border-radius: 15px;
+  --box-shadow: 5px 5px 5px rgba(7, 19, 32, 0.5),
+    -5px -5px 5px rgba(255, 255, 255, 0.5);
+  --background-color-action-box: rgba(0, 0, 0, 0.25);
+  --background-color-box: rgba(38, 38, 39, 0.7);
+  --padding-default: 15px;
+  --border-default-box: 5px solid var(--background-color-action-box);
+}
+
+:root {
+  font-family: Arial;
+  font-size: var(--font-size);
+  color: var(--font-color-white);
+  padding: var(--padding-default);
+}
+body {
+  background: linear-gradient(
+    to right,
+    var(--background-color-4),
+    var(--background-color-3),
+    var(--background-color-1),
+    var(--background-color-2),
+    var(--background-color-1),
+    var(--background-color-3),
+    var(--background-color-4)
+  );
+}
+.header {
+  text-align: center;
+  font-size: var(--font-size-header);
+  background-color: var(--background-color-box);
+  border-radius: var(--border-radius);
+  margin: 0vw 10vw;
+  padding: 1vw;
+  border: var(--border-default-box);
+  box-shadow: var(--box-shadow);
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: var(--padding-default);
+  gap: 5vw;
+  margin: 3vw 9vw;
+}
+.box {
+  background-color: var(--background-color-box);
+  border-radius: var(--border-radius);
+  padding: var(--padding-default);
+  border: var(--border-default-box);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--font-color-white);
+  text-decoration: none;
+}
+.grid-container {
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+.grid-container .box {
+  transition: 0.5s;
+}
+.grid-container .box:hover {
+  transform: translateZ(150px);
+  cursor: pointer;
+}
+/* + element je na desno od hover-anog */
+.grid-container .box:hover + * {
+  filter: brightness(0.6);
+  transform: translateZ(110px) rotateY(20deg);
+}
+.grid-container .box:hover + * + * {
+  filter: brightness(0.4);
+  transform: translateZ(55px) rotateY(10deg);
+}
+.grid-container .box:has(+ *:hover) {
+  filter: brightness(0.6);
+  transform: translateZ(110px) rotateY(-20deg);
+}
+.grid-container .box:has(+ * + *:hover) {
+  filter: brightness(0.4);
+  transform: translateZ(55px) rotateY(-10deg);
+}
+/*
+:hover + * sljedeci element
+has(+ *:hover) prijašnji element
+*/

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zbrajanje i oduzimanje matrica</title>
+    <script src="../../JavaScript/Zadatak2/Zadatak_2_zbrajanje_i_oduzimanje_matrica.js"></script>
+    <script src="../../JavaScript/Zadatak2/Zadatak_2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="../../css/Zadatak2/Zadatak_2_zbrajanje_i_oduzimanje_matrica.css"
+    />
+  </head>
+  <body>
+    <div class="header">Zbrajanje i oduzimanje matrica</div>
+    <div class="grid-container">
+      <div class="input-base">
+        <div class="message">Učitati matrice</div>
+        <div class="default-text">1. Matrica</div>
+        <label for="row-matA" class="label">Broj retka:</label>
+        <input
+          id="row-matA"
+          type="text"
+          class="input"
+          placeholder="Upiši broj retka"
+          autocomplete="off"
+          maxlength="1"
+          size="2"
+        />
+        <label for="cols-matA" class="label">Broj stupca:</label>
+        <input
+          id="cols-matA"
+          type="text"
+          class="input"
+          placeholder="Upiši broj stupca"
+          autocomplete="off"
+          maxlength="1"
+          size="2"
+        />
+        <div class="default-text">2. Matrica</div>
+        <label for="row-matB" class="label">Broj retka:</label>
+        <input
+          id="row-matB"
+          type="text"
+          class="input"
+          placeholder="Upiši broj retka"
+          autocomplete="off"
+          maxlength="1"
+          size="2"
+        />
+        <label for="cols-matB" class="label">Broj stupca:</label>
+        <input
+          id="cols-matB"
+          type="text"
+          class="input"
+          placeholder="Upiši broj stupca"
+          autocomplete="off"
+          maxlength="1"
+          size="2"
+        />
+        <button id="del" class="button">Obriši</button>
+        <button id="submit" class="button">Učitaj</button>
+      </div>
+
+      <!--  -->
+
+      <div class="base" id="base">
+        <div id="mat-id" class="message">Matrica 1</div>
+
+        <div id="input-gen" class="input-gen">
+          <!-- Ovdje ne stavljati ništa (JS Magic) -->
+        </div>
+
+        <div class="button-grid">
+          <button id="mat-1" class="button">Mat 1.</button>
+          <button id="mat-2" class="button">Mat 2.</button>
+          <button id="add" class="button">Zbrajanje</button>
+          <button id="sub" class="button">Oduzimanje</button>
+        </div>
+      </div>
+      <div class="result-base" id="result-base">
+        <div class="message">Rezultat</div>
+        <div id="result-input-gen" class="result-input-gen">
+          <!-- Ovdje ne stavljati ništa (JS Magic) -->
+        </div>
+      </div>
+    </div>
+
+    <canvas class="background"></canvas>
+  </body>
+</html>

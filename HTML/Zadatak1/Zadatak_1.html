@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zadatak 1</title>
+    <link rel="stylesheet" href="../../css/Zadatak1/Zadatak_1.css" />
+    <script src="../../JavaScript/Zadatak1/Zadatak_1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+    <script src="../../JavaScript/index.js"></script>
+  </head>
+  <body>
+    <div class="main_header">
+      Zadatak 1 - Program za učitati matrice, transponirati i provjeravati
+      simetričnost / antisimetričnost matrica
+    </div>
+
+    <div class="mat_grid_container">
+      <div class="grid_container">
+        <div class="grid_item mat_name">Učitati matricu</div>
+        <label for="red_matrice_m" class="grid_item label_item"
+          >Upiši retke matrice:</label
+        >
+        <input
+          id="red_matrice_m"
+          type="text"
+          class="grid_item input_item"
+          maxlength="1"
+          size="2"
+          placeholder="Upiši retke matrice"
+          autocomplete="off"
+        />
+
+        <label for="stupac_matrice_n" class="grid_item label_item"
+          >Upiši stupce matrice:</label
+        >
+        <input
+          id="stupac_matrice_n"
+          type="text"
+          class="grid_item input_item"
+          maxlength="1"
+          size="2"
+          placeholder="Upiši stupce matrice"
+          autocomplete="off"
+        />
+
+        <button class="button" id="submit-button">Učitaj</button>
+        <button class="button" id="delete-button">Obriši</button>
+      </div>
+
+      <div class="result-container" id="result-container">
+        <div class="result-header grid_item" id="check-display">
+          Upiši podatke
+        </div>
+
+        <div style="padding: 8px">
+          <div class="matrix-edge-line">
+            <div class="matrix-corner-line"></div>
+            <div></div>
+            <div class="matrix-corner-line"></div>
+          </div>
+
+          <div id="matrix-container" class="result-matrix-grid-container">
+            <!-- Ovdje ne stavljati ništa (JS Magic) -->
+          </div>
+
+          <div class="matrix-edge-line">
+            <div class="matrix-corner-line"></div>
+            <div></div>
+            <div class="matrix-corner-line"></div>
+          </div>
+        </div>
+        <div class="button-result-container">
+          <button class="button-result" id="transposeButton">
+            Transponiraj
+          </button>
+          <button class="button-result" id="checkSymmetryButton">
+            Provjeri simetričnost
+          </button>
+          <button class="button-result" id="checkAntisymmetryButton">
+            Provjeri antisimetričnost
+          </button>
+        </div>
+      </div>
+
+      <div class="result-of-button" id="resultOfButton">
+        <div class="grid_item" style="border-radius: 15px">
+          Transponirana matrica
+        </div>
+
+        <div style="padding: 8px">
+          <div class="matrix-edge-line" style="padding: 0px">
+            <div class="matrix-corner-line" style="padding: 2px"></div>
+            <div></div>
+            <div class="matrix-corner-line" style="padding: 2px"></div>
+          </div>
+          <div id="transpose-container" class="transpose-matrix-grid-container">
+            <!-- Ovdje ne stavljati ništa (JS Magic) -->
+          </div>
+          <div class="matrix-edge-line" style="padding: 0px">
+            <div class="matrix-corner-line" style="padding: 2px"></div>
+            <div></div>
+            <div class="matrix-corner-line" style="padding: 2px"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <canvas class="background"></canvas>
+  </body>
+</html>

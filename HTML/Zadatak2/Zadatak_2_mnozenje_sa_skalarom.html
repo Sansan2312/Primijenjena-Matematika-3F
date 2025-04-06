@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Množenje matrice sa skalarom</title>
+    <script src="../../JavaScript/Zadatak2/Zadatak_2_monozenje_sa_skalarom.js"></script>
+    <script src="../../JavaScript/Zadatak2/Zadatak_2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="../../css/Zadatak2/Zadatak_2_mnozenje_sa_skalarom.css"
+    />
+  </head>
+  <body>
+    <div class="header">Množenje matrica sa skalarom</div>
+    <div class="grid-container">
+      <div class="input-base">
+        <div class="message">Učitati matricu</div>
+        <label for="row-mat" class="label">Broj retka: </label>
+        <input
+          id="row-mat"
+          type="text"
+          class="input"
+          placeholder="Upiši broj retka"
+          autocomplete="off"
+          maxlength="1"
+          size="2"
+        />
+        <label for="cols-mat" class="label">Broj stupca: </label>
+        <input
+          id="cols-mat"
+          type="text"
+          class="input"
+          placeholder="Upiši broj stupca"
+          autocomplete="off"
+          maxlength="1"
+          size="2"
+        />
+        <div class="message">Učitati skalar</div>
+        <label for="scalar" class="label">Skalar: </label>
+        <input
+          id="scalar"
+          type="text"
+          class="input"
+          placeholder="Upiši skalar"
+          autocomplete="off"
+          maxlength="6"
+          size="2"
+        />
+        <button id="del" class="button">Obriši</button>
+        <button id="submit" class="button">Učitaj</button>
+      </div>
+
+      <!--  -->
+
+      <div class="base" id="base">
+        <div id="mat-id" class="message">Matrica</div>
+
+        <div id="input-gen" class="input-gen">
+          <!-- Ovdje ne stavljati ništa (JS Magic) -->
+        </div>
+        <button id="result" class="button">Rezultat</button>
+      </div>
+      <div class="result-base" id="result-base">
+        <div class="message">Rezultat</div>
+        <div id="result-input-gen" class="result-input-gen">
+          <!-- Ovdje ne stavljati ništa (JS Magic) -->
+        </div>
+      </div>
+    </div>
+
+    <canvas class="background"></canvas>
+  </body>
+</html>
