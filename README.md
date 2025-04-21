@@ -19,3 +19,6 @@ https://sansan2312.github.io/Primijenjena-Matematika-3F/
 6. **Matrix Addition and Subtraction** -> Add or subtract two matrices of the same dimensions. Useful for practicing and visualizing basic matrix operations.
 
 7. **Matrix Multiplication** -> Multiply two compatible matrices using standard matrix multiplication rules. The result is automatically displayed with correct dimensions.
+
+# ⚠️ Note
+This website is not mobile-friendly.
