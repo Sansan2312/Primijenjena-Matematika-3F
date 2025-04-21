@@ -3,6 +3,8 @@ A simple educational website for Applied Mathematics designed for 3rd grade high
 
 This project provides interactive tools to work with matrices directly in the browser, using HTML, CSS, and JavaScript.
 
+https://sansan2312.github.io/Primijenjena-Matematika-3F/
+
 # Features
 1. **Matrix Input Interface** -> Enter custom matrices through a dynamic input grid. The interface allows you to set the matrix dimensions and input values manually.
 
